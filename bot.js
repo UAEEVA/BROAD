@@ -150,12 +150,10 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
 
-            برودكاست عادي : ${prefix}md
-            دعوة البوت لسيرفرك : ${prefix}invite
-            معلومات عن السيرفر : ${prefix}server
-            برودكاست للأونلاين فقط : ${prefix}bco
-            يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/k6MvfrC
+            $bc : Broadcast Normal
+$invite : invite bot to your server
+$bco : Broadcast for online people only
+$banned : Shows you how many banned in your server
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
