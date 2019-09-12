@@ -27,9 +27,9 @@ client.on("message", async message => {
                     return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
                 }
                     if(!args) {
-                        return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
+                        return message.reply("**you must type a word or phrase to send a Broadcast**");
                     }
-                        message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟\nمحتوى البرودكاست: \`${args}\`**`).then(m => {
+                        message.channel.send(`**Are you sure you want to send a Broadcast?\Broadcast content: \`${args}\`**`).then(m => {
                             m.react("✅")
                             .then(() => m.react("❌"));
 
@@ -148,7 +148,7 @@ client.on("message", async message => {
         let help = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
-            .setDescription(`**__برودكاست بوت | Version 1.1__ 
+            .setDescription(`**__Broadcast bot | Version 1.1__ 
 
             $bc : Broadcast Normal
 $invite : invite bot to your server
