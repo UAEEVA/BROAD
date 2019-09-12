@@ -11,7 +11,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`$bc |DF_Team`,"http://twitch.tv/Death Shop")
+client.user.setGame(`$DM |DF_Team`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -24,7 +24,7 @@ client.on("message", async message => {
             var args = message.content.split(" ").slice(1).join(" ");
             if(command == "MD") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**sorry Do not own Do not own Power `ADMINISTRATOR`**");
                 }
                     if(!args) {
                         return message.reply("**you must type a word or phrase to send a Broadcast**");
@@ -61,12 +61,12 @@ client.on("message", async message => {
                             
                         });
             }
-            if(command == "MDo") {
+            if(command == "DMo") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**sorry Do not own Do not own Power`ADMINISTRATOR`**");
                 }
                     if(!args) {
-                        return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
+                        return message.reply("**You must write a word or phrase to send the Broadcast**");
                     }
                         message.channel.send(`**Are you sure you want to send a Broadcast?\Broadcast content: \`${args}\`**`).then(m => {
                             m.react("✅")
@@ -150,7 +150,7 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__Broadcast bot | Version 1.1__ 
 
-            $MD : Broadcast Normal
+            $DM : Broadcast Normal
 $invite : invite bot to your server
 $bco : Broadcast for online people only
 $banned : Shows you how many banned in your server
