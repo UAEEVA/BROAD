@@ -90,7 +90,7 @@ client.on("message", async message => {
                                             .addField("Sender", message.author.username)
                                             .addField("Message", args);
 
-                                            member.sendEmbed(bco);
+                                            member.sendEmbed(DMo);
                                         });
                         });
                         no.on("collect", v => {
