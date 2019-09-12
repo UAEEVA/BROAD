@@ -24,7 +24,7 @@ client.on("message", async message => {
             var args = message.content.split(" ").slice(1).join(" ");
             if(command == "DM") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**Unfortunately you do not have permission `ADMINISTRATOR`**");
                 }
                     if(!args) {
                         return message.reply("**you must type a word or phrase to send a Broadcast**");
@@ -63,7 +63,7 @@ client.on("message", async message => {
             }
             if(command == "DMo") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**Unfortunately you do not have permission`ADMINISTRATOR`**");
                 }
                     if(!args) {
                         return message.reply("**you must type a word or phrase to send a Broadcast**");
@@ -171,7 +171,7 @@ client.on("message", message => { //clear
         
         message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
         message.channel.sendMessage("", {embed: {
-          title: "``تــم مسح الشات ``",
+          title: "``DONE DELET CHAT ``",
           color: 0x5016f3, 
           footer: {
             
