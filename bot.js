@@ -22,7 +22,7 @@ client.on("message", async message => {
     command = command.slice(prefix.length);
         if(!message.channel.guild) return;
             var args = message.content.split(" ").slice(1).join(" ");
-            if(command == "bc") {
+            if(command == "MD") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
                     return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
                 }
@@ -43,7 +43,7 @@ client.on("message", async message => {
                                 m.delete();
                                     message.channel.send(`:ballot_box_with_check: | Done ... The Broadcast Message Has Been Sent For ${message.guild.memberCount} Members`).then(msg => msg.delete(5000));
                                         message.guild.members.forEach(member => {
-                                            let bc = new Discord.RichEmbed()
+                                            let MD = new Discord.RichEmbed()
                                             .setColor("RANDOM")
                                             .setThumbnail(message.author.avatarURL)
                                             .setTitle("Broadcast")
@@ -51,7 +51,7 @@ client.on("message", async message => {
                                             .addField("Sender", message.author.username)
                                             .addField("Message", args);
 
-                                            member.sendEmbed(bc);
+                                            member.sendEmbed(MD);
                                         });
                         });
                         no.on("collect", v => {
@@ -61,14 +61,14 @@ client.on("message", async message => {
                             
                         });
             }
-            if(command == "bco") {
+            if(command == "MDo") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
                     return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
                 }
                     if(!args) {
                         return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
                     }
-                        message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟\nمحتوى البرودكاست: \`${args}\`**`).then(m => {
+                        message.channel.send(`**Are you sure you want to send a Broadcast?\Broadcast content: \`${args}\`**`).then(m => {
                             m.react("✅")
                             .then(() => m.react("❌"));
 
@@ -150,7 +150,7 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__Broadcast bot | Version 1.1__ 
 
-            $bc : Broadcast Normal
+            $MD : Broadcast Normal
 $invite : invite bot to your server
 $bco : Broadcast for online people only
 $banned : Shows you how many banned in your server
@@ -170,7 +170,7 @@ client.on("message", message => { //clear
         
         message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
         message.channel.sendMessage("", {embed: {
-          title: "``تــم مسح الشات ``",
+          title: "``DONE DELET CHAT ``",
           color: 0x5016f3, 
           footer: {
             
