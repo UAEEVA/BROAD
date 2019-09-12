@@ -51,7 +51,7 @@ client.on("message", async message => {
                                             .addField("Sender", message.author.username)
                                             .addField("Message", args);
 
-                                            member.sendEmbed(MD);
+                                            member.sendEmbed(DM);
                                         });
                         });
                         no.on("collect", v => {
